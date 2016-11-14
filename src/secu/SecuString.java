@@ -24,81 +24,83 @@ public class SecuString {
 		boolean r=true;
 		String numero;
 		
-		 System.out.println("Veuillez entrer votre numéro de sécurité sociale");
-		 numero=sc.nextLine();
-		 
-		 
+		System.out.println("Veuillez entrer votre numéro de sécurité sociale");
+		numero=sc.nextLine();
+
 		 
 		 do{
-			 if (numero.length()!=13){
-			if (numero.length()<13){
-				 System.out.println("Votre numéro de sécurité sociale doit avoir 13 chiffres,il est trop court, veuillez recommencer");
-			}
-			else if (numero.length()>13){
-				 System.out.println("Votre numéro de sécurité sociale doit avoir 13 chiffres,il est trop long, veuillez recommencer");
-			}
-			 }
-
-		
-		 //if (r==true)
-		 //if (numero.substring(0,1).equals("1")){
-				// System.out.println("vous etes un homme! Sauf si vous vous êtes trompé");
-				// }
-		 
-		//if (r==true)
-		 //else if (numero.substring(0,1).equals("2")){
-			// System.out.println("vous etes une femme! Sauf si vous vous êtes trompé");
-		// }
-		// r=(!numero.substring(0,0).equals("1")) || (!numero.substring(0,0).equals("2"));
 			 
-		//if (r==true)
-		  if ((!numero.substring(0,1).equals("1")) && (!numero.substring(0,1).equals("2"))){
-			 System.out.println("vous vous etes trompé sur le premier chiffre");
-			 }
-		 
-		 
-		 String a= numero.substring(1,3);
-		 
-			if (Integer.parseInt(a)<0 || Integer.parseInt(a)>99){
-				 System.out.println("Erreur sur votre année de naissance");
-				}
-		 
-		 
-		 String t= numero.substring(3,5);
+			if (numero.length()!=13) {
+				
+				if (numero.length() < 13) {
+					
+					 System.out.println("Votre numéro de sécurité sociale doit avoir 13 chiffres,il est trop court, veuillez recommencer");
 
-		if (Integer.parseInt(t)<0 || Integer.parseInt(t)>13){
-			 System.out.println("Erreur sur le mois de naissance");
-			}
-		
-		 String d= numero.substring(5,7);
-		 
-			if (Integer.parseInt(d)<0 || Integer.parseInt(d)>97){
-				 System.out.println("Erreur sur votre département de naissance");
+				} else if (numero.length() > 13 ) {
+					
+					 System.out.println("Votre numéro de sécurité sociale doit avoir 13 chiffres,il est trop long, veuillez recommencer");
 				}
+
+			} else {
+			 
+
+			 if(numero.substring(0,1).equals("1") || numero.substring(0,1).equals("1") ) {
+				
+				System.out.println("vous etes un homme! Sauf si vous vous êtes trompé");
+				
+				String a= numero.substring(1,3);
+				
+				if (Integer.parseInt(a) < 0 || Integer.parseInt(a) > 99 ) {
+						 
+					System.out.println("Erreur sur votre année de naissance");
+					
+					System.out.println("Veuillez recommencer");
+				} else {
+					
+					System.out.println("Good année de naissance");
+					
+					String t= numero.substring(3,5);
+					
+					if (Integer.parseInt(t) < 0 || Integer.parseInt(t) > 13) {
+						
+						 System.out.println("Erreur sur le mois de naissance");
+						 
+						 System.out.println("Veuillez recommencer");
+						 
+					} else {
+						
+						System.out.println("Good le mois de naissance");
+						
+						String d= numero.substring(5,7);
+						 
+						if (Integer.parseInt(d) < 0 || Integer.parseInt(d) > 97) {
+							
+							
+							 System.out.println("Erreur sur votre département de naissance");
+							 
+							 System.out.println("Veuillez recommencer");
+							 
+						} else {
+							
+							System.out.println("Good département de naissance");
+							
+							System.out.println("Bon numéro de sécu");
+						}
+					}
+				}
+				
+			} else 
+				
+				System.out.println("vous n'etes ni un homme ni une femme ! Veuillez recommencer");
+
+			 
+			}
+				
+		 } while (r==false);
 		 
+		
 	
-			 if(r==true){
-				 System.out.println("Veuillez recommencer");
-			}
-			 
-		 }while (r==false);
-		 
-		
-		 
-		 while (r==false){
-			 if (numero.substring(0,1).equals("1")){
-				 System.out.println("vous etes un homme! Sauf si vous vous êtes trompé");
-				 }
-		 
-		 if (numero.substring(0,1).equals("2")){
-				 System.out.println("vous etes une femme! Sauf si vous vous êtes trompé");
-			}
-	}
-				 
-		//int cle=97-((Integer.parseInt(numero)) % 97);
-		
-		//System.out.println("Voici votre numéro de sécurité sociale en entier: " +numero +" " +cle);
-		
+
 	}
 
 }
