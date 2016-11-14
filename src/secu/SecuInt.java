@@ -30,6 +30,8 @@ public class SecuInt {
 		System.out.println();
 		
 		int num;
+		
+		String nums;
 		int i=1;
 	  
 		// boucles pour la saisie des 13 caracteres
@@ -49,7 +51,7 @@ public class SecuInt {
 				nums= (String)(num);
 			// boolean j=false;
 			 
-		do{	if ({
+		do{	//if ({
 			//System.out.println("Erreur sur la longueur de votre numéro de sécurité sociale, nous voulons les 13 premiers chiffres: " );
 		//}
 			
